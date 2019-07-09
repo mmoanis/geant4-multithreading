@@ -43,3 +43,7 @@ ADD_EXECUTABLE(g4-test-ownmt main_ownmt.cpp SimpleMasterRunManager.cpp SimpleWor
 
 TARGET_INCLUDE_DIRECTORIES(g4-test-ownmt SYSTEM PRIVATE ${Geant4_INCLUDE_DIRS})
 TARGET_LINK_LIBRARIES(g4-test-ownmt ${Geant4_LIBRARIES} Threads::Threads)
+
+ADD_EXECUTABLE(rng-test-nomt main_rng.cpp)
+TARGET_INCLUDE_DIRECTORIES(rng-test-nomt SYSTEM PRIVATE ${Geant4_INCLUDE_DIRS})
+TARGET_LINK_LIBRARIES(rng-test-nomt ${Geant4_LIBRARIES})
